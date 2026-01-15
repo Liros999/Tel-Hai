@@ -1,0 +1,6 @@
+docker run --rm \
+-v $(pwd):/app \
+-v $(pwd)/data:/data \
+python:3.11-slim \
+bash -c "pip install pandas numpy && python /app/generate.py"
+
