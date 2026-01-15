@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Linux Assignment 2: Python Container - Manual Installation & Run
 
 ## Assignment Overview
@@ -65,3 +66,6 @@ See `exercises/README.md` for detailed exercise instructions.
 - [GitHub Codespaces](https://github.com/features/codespaces)
 
 
+=======
+# Tel-Hai
+>>>>>>> ec0ce5cc170d0750ade8ac24f0ae9da2c36106c0
