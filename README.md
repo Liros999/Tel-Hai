@@ -1,7 +1,8 @@
-<<<<<<< HEAD
-# Linux Assignment 2: Python Container - Manual Installation & Run
+# Tel-Hai
 
-## Assignment Overview
+## Linux Assignment 2: Python Container - Manual Installation & Run
+
+### Assignment Overview
 
 This assignment demonstrates manual Python container creation and usage in GitHub Codespaces, without using Dockerfile or DevContainer configurations.
 
@@ -12,16 +13,20 @@ This assignment demonstrates manual Python container creation and usage in GitHu
 ├── README.md                    # This file
 ├── python_container_tutorial.md # Complete tutorial guide
 ├── instructor_notes.md          # Notes for instructors
+├── generate.py                  # Docker volumes example script
+├── EXACT_COMMAND.txt            # The Docker command to run
 ├── examples/                   # Example Python scripts
 │   ├── main.py
 │   └── experiment.py
-└── exercises/                  # Mandatory exercises
-    ├── README.md
-    ├── plot_example.py
-    ├── save_csv.py
-    ├── read_csv.py
-    ├── create_json.py
-    └── seaborn_example.py
+├── exercises/                  # Mandatory exercises
+│   ├── README.md
+│   ├── plot_example.py
+│   ├── save_csv.py
+│   ├── read_csv.py
+│   ├── create_json.py
+│   └── seaborn_example.py
+└── data/                       # Output directory for results
+    └── .gitkeep
 ```
 
 ## Quick Start
@@ -59,6 +64,20 @@ All exercises are located in the `exercises/` directory:
 
 See `exercises/README.md` for detailed exercise instructions.
 
+## Docker Volumes Example
+
+Run the Docker command with volume mounting:
+
+```bash
+docker run --rm \
+-v $(pwd):/app \
+-v $(pwd)/data:/data \
+python:3.11-slim \
+bash -c "pip install pandas numpy && python /app/generate.py"
+```
+
+This creates `result.csv` in the `data/` folder. See `DOCKER_COMMAND.md` for detailed explanation.
+
 ## Resources
 
 - [Docker Documentation](https://docs.docker.com/)
@@ -66,6 +85,3 @@ See `exercises/README.md` for detailed exercise instructions.
 - [GitHub Codespaces](https://github.com/features/codespaces)
 
 
-=======
-# Tel-Hai
->>>>>>> ec0ce5cc170d0750ade8ac24f0ae9da2c36106c0
